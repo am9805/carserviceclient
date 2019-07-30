@@ -4,6 +4,7 @@ import { CarListComponent } from './car-list/car-list.component';
 import { CarEditComponent } from './car-edit/car-edit.component';
 import {OwnerEditComponent} from './owner-edit/owner-edit.component';
 import {OwnerListComponent} from './owner-list/owner-list.component';
+import {CarForOwnerListComponent} from './car-for-owner-list/car-for-owner-list.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/car-list', pathMatch: 'full' },
@@ -26,7 +27,16 @@ const routes: Routes = [
   {
     path: 'owner-edit/:id',
     component: OwnerEditComponent
+  },
+  {
+    path: 'owner-list',
+    component: OwnerListComponent
+  },
+  {
+    path: 'car-owner-list',
+    component: CarForOwnerListComponent
   }
+
 ];
 
 @NgModule({

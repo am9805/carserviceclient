@@ -1,5 +1,11 @@
 <mat-toolbar color="primary">
-  <span>Welcome to {{title}}!</span>
+
+  <mat-toolbar-row>
+    <span>Welcome to {{title}}!</span>
+    <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/car-list']">Car List</button>
+    <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/owner-list']">Owner List</button>
+    <button mat-flat-button color="accent" class="menu-button" [routerLink]="['/car-owner-list']">Owner x Car List</button>
+  </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
