@@ -1,3 +1,25 @@
+# Solución del Laboratorio
+### Nombre: Angélica Arroyave Mendoza 
+## Servicios
+Para realizar el consumo de los datos del **owner** se realizaron los siguientes servicios:
+**getAll():** Obtiene todos los owners. Ejecuta el método get de HTTP.  
+**getOwner(dni):** Obtiene el owner identificado por el dni que ingresa por argumento. Ejecuta el método get de HTTP.  
+**createOwner(owner):** Recibe como parámetro el nuevo owner. Ejecuta el método post de HTTP.  
+**deleteOwner(href):** Recibe como parámetro el href que identifica al owner que lo tenga asociado. Ejecuta el método delete de HTTP.  
+**updateOwner(href, owner):** Recibe como parámetros un href para identificar el owner que deseamos modificar por el segundo parámetro. Ejecuta el método put de HTTP.  
+
+Todos estos esta localizados en la carpeta *"/shared/owner"*
+## Componentes
+Para desplegar la lista de *Owners*  se creó el componente **owner-list**.
+Para editar, crear y eliminar un owner se creó el componente **owner-edit**.
+Para desplegar la lista de *Owners X Cars* se creó el componente **car-for-owner**.
+
+>**Nota [1]:** El componente car-edit fue editado para que desplegara la lista de Owners existentes y así poder asociar un owner a un car. Se implemento el método getAll() de owner services.
+>**Nota [2]:** Para hacer el join entre los Owners y los Cars asociados a un Owner, se aplicó el método filter de javascript que devuelve un array de acuerdo a una condición, en este caso la condición establecida fue si el ownerDni del car era igual al dni del owner.
+>**Nota[3]**: Como estuve presentando problemas en mi equipo para realizar el laboratorio, es normal que el usuario que aparezca haciendo los cambios sea alguien diferente a mi dado que el equipo me fue prestado. Si ha de ser necesario, puedo sustentar el laboratorio sin ningún inconveniente.
+
+
+
 # CarServiceClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
