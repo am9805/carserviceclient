@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { OwnerService } from '../shared/owner/owner.service'
+import { OwnerService } from '../shared/owner/owner.service';
+import { CarService } from '../shared/car/car.service'
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-owner-edit',
@@ -15,7 +16,8 @@ export class OwnerEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     private router: Router,
-    private ownerServices: OwnerService) { }
+    private ownerServices: OwnerService,
+    private carServices : CarService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -50,6 +52,7 @@ export class OwnerEditComponent implements OnInit {
       }, error => console.error(error));
     }
   }
+  
 
   removeOwner(){
     this.ownerServices.deleteOwner(this.ownerHref).subscribe(response => {
