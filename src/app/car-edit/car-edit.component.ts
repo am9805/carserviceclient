@@ -23,7 +23,6 @@ export class CarEditComponent implements OnInit, OnDestroy {
               private giphyService: GiphyService, 
               private ownerService: OwnerService) {
   }
-
   ngOnInit() {
     this.getOwners();
     this.sub = this.route.params.subscribe(params => {
@@ -64,7 +63,7 @@ export class CarEditComponent implements OnInit, OnDestroy {
   }
 
   remove(href) {
-    this.carService.remove(href).subscribe(result => {
+    this.carService.remove('href').subscribe(result => {
       this.gotoList();
     }, error => console.error(error));
   }

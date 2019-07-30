@@ -9,6 +9,7 @@ import {OwnerService} from '../shared/owner/owner.service';
 })
 export class OwnerListComponent implements OnInit {
   owners: any[];
+  
 
   constructor( private ownerService: OwnerService) { }
 
@@ -19,6 +20,11 @@ export class OwnerListComponent implements OnInit {
     this.ownerService.getAll().subscribe(owners => {
       this.owners = owners['_embedded']['owners'];      
     });
+  }
+
+  setOwner(owner){
+    localStorage.setItem('ownerHref', owner['_links']['self']['href']);
+    
   }
 
 

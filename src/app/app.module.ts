@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule, MatGridListModule} from '@angular/material';
 import { OwnerListComponent } from './owner-list/owner-list.component';
 import { OwnerEditComponent } from './owner-edit/owner-edit.component';
+import { CarForOwnerListComponent } from './car-for-owner-list/car-for-owner-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OwnerEditComponent } from './owner-edit/owner-edit.component';
     CarListComponent,
     CarEditComponent,
     OwnerListComponent,
-    OwnerEditComponent
+    OwnerEditComponent,
+    CarForOwnerListComponent
   ],
   imports: [
     BrowserModule,
