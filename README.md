@@ -1,5 +1,5 @@
-# Solución del Laboratorio
-### Nombre: Angélica Arroyave Mendoza 
+# :star: Solución del Laboratorio :star:
+### Nombre: Angélica Arroyave Mendoza :octocat:
 ## Servicios
 Para realizar el consumo de los datos del **owner** se realizaron los siguientes servicios:
 **getAll():** Obtiene todos los owners. Ejecuta el método get de HTTP.  
